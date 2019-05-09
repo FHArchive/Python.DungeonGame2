@@ -3,7 +3,7 @@ Year 2017 (ammendments made 10/2018)
 Author Kieran
 
 A simple dungeon game that runs in the command line, avoid the monsters to get
-to the door. 
+to the door.
 """
 
 import sys
@@ -17,12 +17,14 @@ gameEnd = True
 Method spawn
 Inputs [none]
 Outputs spawnX, spawnY: integers
-This method gives the player random coordinates 
+This method gives the player random coordinates
 """
 def spawn(size):
     import random
-    spawnY = random.randint(0,size)
-    spawnX = random.randint(0,size)
+    # Use SystemRandom
+    systemRandom = random.SystemRandom()
+    spawnY = systemRandom.randint(0,size)
+    spawnX = systemRandom.randint(0,size)
     return spawnX, spawnY
 
 """
@@ -59,10 +61,12 @@ def movement(playerX, playerY,size):
 
 def moveMonster(monsters, size):
     import random
-    selection = random.randint(0,len(monsters)-1)
+    # Use SystemRandom
+    systemRandom = random.SystemRandom()
+    selection = systemRandom.randint(0,len(monsters)-1)
     monsterX = monsters[selection][0]
     monsterY = monsters[selection][1]
-    move = random.randint(0,3)
+    move = systemRandom.randint(0,3)
     
     if move == 0:
         monsterX += 1
@@ -109,8 +113,6 @@ def checkSpawns(playerX, playerY, monsters, doorX, doorY,level, monsterNo):
                 if monster2X == monsterX:
                     if monster2Y == monsterY:
                         return 0
-                    pass
-                pass
 
     if playerX == doorX:
         if playerY == doorY:
@@ -182,7 +184,7 @@ def render(playerX, playerY, doorX, doorY, monsters,size,monsterNo):
                     monsterY = monsters[m][1]
                     if x == monsterX and y == monsterY:
                         print("M",end="")
-                        spaces -= 1 
+                        spaces -= 1
             for space in range(spaces):
                 print(" ",end="")
         print()
@@ -215,7 +217,7 @@ def game(level, gameEnd):
             monsterPos.append(monsterY)
             monsters.append(monsterPos)
         canContinue = checkSpawns(playerX, playerY, monsters, doorX, doorY,level,monsterNo)
-        
+
     print("The {} is at ({},{})".format("player",playerX, playerY))
     for m in range (monsterNo):
         monsterX = monsters[m][0]
