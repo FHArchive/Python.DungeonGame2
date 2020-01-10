@@ -15,7 +15,7 @@
 # Python.DungeonGame2
 
 
-<img src="readme-assets/icons/name.png" alt="Project Icon" width="100">
+<img src="readme-assets/icons/name.png" alt="Project Icon" width="750">
 
 A simple dungeon game that runs in the command line, avoid the monsters to get to the door.
 
