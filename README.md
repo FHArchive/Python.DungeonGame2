@@ -1,8 +1,8 @@
 
 <p float="left">
 <img src="https://img.shields.io/github/languages/top/fredhappyface/Python.DungeonGame2.svg?style=flat-square" alt="Github top language">
-<img src="https://img.shields.io/codacy/grade/:codacy-proj-id:.svg?style=flat-square" alt="Codacy grade">
-<img src="https://img.shields.io/codacy/coverage/:codacy-proj-id:.svg?style=flat-square" alt="Codacy coverage">
+<img src="https://img.shields.io/codacy/grade/b8902052cfd44254894c7d0471bdb0f2.svg?style=flat-square" alt="Codacy grade">
+<img src="https://img.shields.io/codacy/coverage/b8902052cfd44254894c7d0471bdb0f2.svg?style=flat-square" alt="Codacy coverage">
 <img src="https://img.shields.io/github/repo-size/fredhappyface/Python.DungeonGame2.svg?style=flat-square" alt="Repository size">
 <img src="https://img.shields.io/github/issues/fredhappyface/Python.DungeonGame2.svg?style=flat-square" alt="Issues">
 <img src="https://img.shields.io/github/license/fredhappyface/Python.DungeonGame2.svg?style=flat-square" alt="License">
